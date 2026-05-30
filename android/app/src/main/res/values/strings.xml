@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Unicode escapes avoid GBK/mojibake on some Windows build environments -->
+    <string name="app_name">\u5927\u5e08\u7f57\u76d8\u6307\u5357\u9488</string>
+</resources>
