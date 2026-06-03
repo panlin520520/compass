@@ -88,6 +88,9 @@
 
 
 
-
+<key>NSHealthShareUsageDescription</key>
+<string>本应用需要健康分享权限用于运动数据统计</string>
+<key>NSHealthUpdateUsageDescription</key>
+<string>本应用需要健康更新权限用于同步运动信息</string>
 </dict>
 </plist>
