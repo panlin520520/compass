@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <!-- 允许对 aidashi.net 域名使用 http 明文访问 -->
+    <!-- 允许对 API 服务器与 aidashi.net 使用 http 明文访问 -->
     <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">112.124.9.121</domain>
         <domain includeSubdomains="true">aidashi.net</domain>
+        <domain includeSubdomains="true">tianditu.gov.cn</domain>
     </domain-config>
 </network-security-config>
 

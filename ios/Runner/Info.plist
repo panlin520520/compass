@@ -72,6 +72,7 @@
 	<string>我们需要您的位置信息来使用指南针功能。</string>
 	<key>NSCameraUsageDescription</key>
 	<string>我们需要使用摄像头来显示实景罗盘功能。</string>
+	<!-- 允许 HTTP 明文访问（与 Android network_security_config.xml 保持一致） -->
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -84,6 +85,13 @@
 				<true/>
 			</dict>
 			<key>aidashi.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>tianditu.gov.cn</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
