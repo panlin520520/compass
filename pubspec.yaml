@@ -31,6 +31,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: true
+  remove_alpha_ios: true # 关键：自动去掉iOS图标透明通道，白底填充
   image_path: assets/logo.png
   adaptive_icon_background: "#FFFFFF"
   adaptive_icon_foreground: assets/logo.png
