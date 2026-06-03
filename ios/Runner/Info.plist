@@ -87,10 +87,15 @@
 <string>需要访问网络权限</string>
 
 
-
+<!-- 健康权限（上一轮报错） -->
 <key>NSHealthShareUsageDescription</key>
-<string>本应用需要健康分享权限用于运动数据统计</string>
+<string>用于运动健康数据同步</string>
 <key>NSHealthUpdateUsageDescription</key>
-<string>本应用需要健康更新权限用于同步运动信息</string>
+<string>用于更新健康相关数据</string>
+<!-- 紧急消息权限（本轮报错） -->
+<key>NSCriticalMessagingUsageDescription</key>
+<string>用于接收紧急重要消息推送提醒</string>
+
+
 </dict>
 </plist>
