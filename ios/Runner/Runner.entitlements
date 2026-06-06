@@ -135,8 +135,6 @@
 	<true/>
 	<key>com.apple.developer.sustained-execution</key>
 	<true/>
-	<key>com.apple.developer.system-extension.install</key>
-	<true/>
 	<key>com.apple.developer.translation-app</key>
 	<true/>
 	<key>com.apple.developer.user-fonts</key>
