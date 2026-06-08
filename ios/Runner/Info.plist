@@ -81,5 +81,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+	<!-- 前台使用定位（打开App时） -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>需要获取您的位置用于定位服务</string>
+
+    <!-- 前后台持续定位（报错缺失的关键key） -->
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>需要在App前台和后台获取位置，提供完整定位功能</string>
+
+    <!-- 旧版后台定位兼容（可选，建议加上） -->
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>后台持续定位用于轨迹记录</string>
 </dict>
 </plist>
