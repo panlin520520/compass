@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'dart:async';
 import 'dart:math' as math;
 
@@ -75,39 +74,23 @@ class _DecibelPageState extends State<DecibelPage> with SingleTickerProviderStat
     }
   }
   
-  // 开始录制
-  Future<void> _startRecording() async {
-    // 请求麦克风权限
-    final status = await Permission.microphone.request();
-    
-    if (status.isGranted && !_isDisposed && mounted) {
-      setState(() {
-        _isRecording = true;
-      });
-      
-      // 开始模拟音频数据（实际应用中应该使用真实的音频录制）
-      _recordingTimer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
-        if (!_isDisposed && mounted && _isRecording) {
-          setState(() {
-            // 模拟分贝值变化（实际应用中应该从音频数据计算）
-            // 这里使用随机值模拟，实际应该从音频振幅计算
-            final baseDecibel = 50.0 + math.sin(DateTime.now().millisecondsSinceEpoch / 1000.0) * 20.0;
-            final noise = (math.Random().nextDouble() - 0.5) * 5.0;
-            _currentDecibel = (baseDecibel + noise).clamp(0.0, 120.0);
-          });
-        }
-      });
-    } else {
-      // 权限被拒绝
-      if (!_isDisposed && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('需要麦克风权限才能测量分贝'),
-            duration: Duration(seconds: 2),
-          ),
-        );
+  // 开始录制（当前为模拟分贝，不访问麦克风）
+  void _startRecording() {
+    if (_isDisposed || !mounted) return;
+
+    setState(() {
+      _isRecording = true;
+    });
+
+    _recordingTimer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+      if (!_isDisposed && mounted && _isRecording) {
+        setState(() {
+          final baseDecibel = 50.0 + math.sin(DateTime.now().millisecondsSinceEpoch / 1000.0) * 20.0;
+          final noise = (math.Random().nextDouble() - 0.5) * 5.0;
+          _currentDecibel = (baseDecibel + noise).clamp(0.0, 120.0);
+        });
       }
-    }
+    });
   }
   
   // 停止录制（用户点击停止时调用，dispose 中不再调用此方法）
