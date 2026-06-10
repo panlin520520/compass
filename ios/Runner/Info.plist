@@ -41,6 +41,8 @@
 	<string>我们需要您的位置信息来使用指南针功能。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>我们需要访问相册以选择图片用于立极尺等功能。</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>我们需要将测量图片保存到您的相册。</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -81,17 +83,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-
-	<!-- 前台使用定位（打开App时） -->
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>需要获取您的位置用于定位服务</string>
-
-    <!-- 前后台持续定位（报错缺失的关键key） -->
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>需要在App前台和后台获取位置，提供完整定位功能</string>
-
-    <!-- 旧版后台定位兼容（可选，建议加上） -->
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>后台持续定位用于轨迹记录</string>
 </dict>
 </plist>
