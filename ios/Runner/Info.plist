@@ -37,6 +37,9 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>我们需要使用摄像头来显示实景罗盘功能。</string>
+	<!-- 前后台持续定位，报错缺失的就是这个key（必加） -->
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>需要持续获取位置，用于后台位置相关功能</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>我们需要您的位置信息来使用指南针功能。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
